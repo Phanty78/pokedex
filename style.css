@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'early-gameboy';
+    src: url('/asset/police/Early\ GameBoy.ttf') format('truetype'); /* Spécifiez le chemin vers votre fichier TTF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    gap: 3%;
+}
+
+.gallery {
+	width: 60%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.pokedex{
+    width: 20%;
+    border: 15px solid grey;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+    padding: 10px;
+    max-height: 700px;
+    position: sticky;
+    background-image: url(/asset/image/background-pokedex.jpg);
+}
+
+.name-zone, .weight-zone, .height-zone{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.pokedex .power-led{
+    width: 30px;
+    height: 30px;  
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.power-led-off{
+    background-color: red;
+}
+
+.power-led-on{
+    background-color: green;
+}
+
+.pokedex p{
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'early-gameboy', sans-serif;
+}
+
+.pokedex span{
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+    font-family: 'early-gameboy', sans-serif;
+}
+
+.pokedex img{
+    background-color: #67a279;
+    border-radius: 30px;
+    height: 234.09px;
+    margin-top: 35px;
+}
+
+.gallery img {
+	height: 100%;
+	max-width: 367px;
+	max-height: 491px;
+	object-fit: cover;
+}
+
+figure{
+    margin: 0;
+}
+
+.figure-element{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.figure-element:hover{
+    background-color: lightgray;
+}
+
+.figure-element:active{
+    border: 2px solid red;
+}
+
+.selected{
+    background-color: lightgray;
+    border: 2px solid red;
+}
+
+.hidden{
+    display: none;
+}
